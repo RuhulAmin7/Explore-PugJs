@@ -1,0 +1,87 @@
+- var bgRed = 'red'
+doctype html
+
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title #{title}
+        //- script. 
+        //-     alert('Hello pug')
+
+        //- style.
+        //-     p{
+        //-         color: green
+        //-     }
+        link(rel="stylesheet", href="/style.css")
+        //- script(src="/app.js") 
+    body 
+    h1 Hello Bangladesh
+    p Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, quia nesciunt!
+
+    h1(class="hello1" id="helloh1" style="color:red") hello
+
+
+    br
+
+    h1(style="color:red") hello green
+
+    .love i love bangladesh
+    #love hello world
+
+    div 
+        p Lorem ipsum dolor sit amet consectetur, adipisicing elit. Id consequuntur possimus eius? Rerum porro quasi distinctio voluptatibus nobis molestias eos!
+    
+    div.main hello 
+
+
+    h1(style='background-color:'+bgRed) background 
+
+//- case
+- var fruits = 10
+    case fruits
+        when 1
+            p Total fruits #{fruits}
+        when 2
+            p Total fruits #{fruits}
+        when 1
+            p Total fruits #{fruits}
+        default 
+            p Total fruits #{fruits}
+
+//- for loop
+//- -for (var i = 0; i < users.length; i++)
+//-     p= users[i].name
+//-     p= users[i].age
+
+//- for each
+//- each user in users
+//-     h4= user.name
+//-     h4= user.age
+
+//- condition
+//- if users.length 
+//-     each user in users
+//-         h4= user.name
+//- else
+//-     p No users exist
+
+//- condition unless
+//- if users.length > 0
+//-     each user in users
+//-         h4= user.name
+//- unless users.length > 0 
+//-     p No users exist
+
+
+//- mixin
+
+mixin myMixin(name, age)
+    h1= name 
+    h3= age
+
++myMixin('Ruhul', 32)
+
+//- partials
+include partials/part.pug
